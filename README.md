@@ -2,7 +2,8 @@
 ## Usage
 ```
 module "cloudbase" {
-  source = "xxx" # relative path or registry
+  source  = "Levetty/cloudbase/google"
+  version = "0.2.0"
 
   project_id = "xxx" # required
 
