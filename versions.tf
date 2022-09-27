@@ -5,8 +5,6 @@ terraform {
     random = "~> 3.1"
   }
 }
-provider "google" {}
-provider "random" {}
 
 provider "google-beta" {
   project = var.project_id
