@@ -1,4 +1,4 @@
-# terraform-gcp-cloudbase-role
+# terraform-google-cloudbase
 ## Usage
 ```
 module "cloudbase" {
