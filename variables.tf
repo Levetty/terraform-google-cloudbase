@@ -39,6 +39,24 @@ variable "cloudbase_role_permissions" {
     "resourcemanager.projects.getIamPolicy",
     "resourcemanager.resourceTagBindings.list",
     "storage.buckets.getIamPolicy",
-    "storage.buckets.list"
+    "storage.buckets.list",
+    "artifactregistry.dockerimages.list",
+    "artifactregistry.repositories.list",
+    "artifactregistry.repositories.downloadArtifacts",
+    "compute.snapshots.list",
+    "compute.images.list",
+    "compute.resourcePolicies.list",
+    "deploymentmanager.deployments.list",
+    "pubsub.topics.list",
+    "cloudfunctions.functions.list",
+    "compute.instanceTemplates.list",
+    "cloudkms.keyRings.getIamPolicy",
+    "compute.sslPolicies.list",
+    "compute.forwardingRules.list",
+    "compute.urlMaps.list",
+    "pubsub.subscriptions.list",
+    "run.locations.list",
+    "run.services.list",
+    "run.services.getIamPolicy"
   ]
 }
