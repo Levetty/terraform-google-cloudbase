@@ -3,7 +3,7 @@
 ```
 module "cloudbase" {
   source  = "Levetty/cloudbase/google"
-  version = "0.5.0"
+  version = "0.5.1"
 
   project_id = "xxx" # required
 
