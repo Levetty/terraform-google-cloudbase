@@ -57,6 +57,9 @@ variable "cloudbase_role_permissions" {
     "pubsub.subscriptions.list",
     "run.locations.list",
     "run.services.list",
-    "run.services.getIamPolicy"
+    "run.services.getIamPolicy",
+    "cloudfunctions.functions.sourceCodeGet",
+    "cloudfunctions.functions.list",
+    "cloudfunctions.locations.list",
   ]
 }
