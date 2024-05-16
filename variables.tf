@@ -48,7 +48,6 @@ variable "cloudbase_role_permissions" {
     "compute.resourcePolicies.list",
     "deploymentmanager.deployments.list",
     "pubsub.topics.list",
-    "cloudfunctions.functions.list",
     "compute.instanceTemplates.list",
     "cloudkms.keyRings.getIamPolicy",
     "compute.sslPolicies.list",
@@ -61,5 +60,6 @@ variable "cloudbase_role_permissions" {
     "cloudfunctions.functions.sourceCodeGet",
     "cloudfunctions.functions.list",
     "cloudfunctions.locations.list",
+    "serviceusage.services.list",
   ]
 }
