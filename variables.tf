@@ -1,17 +1,17 @@
 variable "project_id" {
-  description = "The Google Cloud Platform project ID"
+  description = "(required) The Google Cloud Platform project ID"
   type        = string
 }
 
 variable "enable_all_apis" {
   default     = false
-  description = "Allow access all APIs"
+  description = "(optional) Allow access all APIs"
   type        = bool
 }
 
 variable "cloudbase_role_permissions" {
   type        = list(string)
-  description = "The list of permissions for the default role"
+  description = "(optional) The list of permissions for the default role"
   default = [
     "cloudasset.assets.listResource",
     "cloudkms.cryptoKeys.list",
