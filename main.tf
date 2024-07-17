@@ -1,38 +1,38 @@
 resource "random_string" "unique_id" {
-  length = 5
+  length    = 5
   min_lower = 5
-  special = false
+  special   = false
 }
 
 resource "google_service_account" "cloudbase_service_account" {
-  account_id = "cloudbase-sa-${random_string.unique_id.result}"
+  account_id   = "cloudbase-sa-${random_string.unique_id.result}"
   display_name = "Cloudbase Service Account"
-  project = var.project_id
+  project      = var.project_id
 }
 
 resource "google_project_iam_custom_role" "cloudbase_project_custom_role" {
-  project = var.project_id
-  role_id = "cloudbaseViewer${random_string.unique_id.result}"
-  title = "Cloudbase Viewer ${random_string.unique_id.result}"
+  project     = var.project_id
+  role_id     = "cloudbaseViewer${random_string.unique_id.result}"
+  title       = "Cloudbase Viewer ${random_string.unique_id.result}"
   permissions = var.cloudbase_role_permissions
 }
 
 resource "google_project_iam_member" "bind_viewer_role" {
   project = var.project_id
-  role = "roles/viewer"
-  member = "serviceAccount:${google_service_account.cloudbase_service_account.email}"
+  role    = "roles/viewer"
+  member  = "serviceAccount:${google_service_account.cloudbase_service_account.email}"
 }
 
 resource "google_project_iam_member" "bind_security_admin_role" {
   project = var.project_id
-  role = "roles/compute.securityAdmin"
-  member = "serviceAccount:${google_service_account.cloudbase_service_account.email}"
+  role    = "roles/compute.securityAdmin"
+  member  = "serviceAccount:${google_service_account.cloudbase_service_account.email}"
 }
 
 resource "google_project_iam_member" "bind_cloudbase_custom_role" {
   project = var.project_id
-  role = "projects/${var.project_id}/roles/${google_project_iam_custom_role.cloudbase_project_custom_role.role_id}"
-  member = "serviceAccount:${google_service_account.cloudbase_service_account.email}"
+  role    = "projects/${var.project_id}/roles/${google_project_iam_custom_role.cloudbase_project_custom_role.role_id}"
+  member  = "serviceAccount:${google_service_account.cloudbase_service_account.email}"
 }
 
 ###################
