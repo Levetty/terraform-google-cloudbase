@@ -48,7 +48,6 @@ locals {
     "cloudasset.assets.listResource",
     "cloudasset.assets.searchAllIamPolicies",
     "cloudfunctions.functions.list",
-    "cloudfunctions.functions.list",
     "cloudfunctions.functions.sourceCodeGet",
     "cloudfunctions.locations.list",
     "cloudkms.cryptoKeys.list",
