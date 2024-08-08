@@ -17,3 +17,14 @@ module "cloudbase" {
   ] # optional: if you want to custom role permissions, you can specify by this variable
 }
 ```
+
+`organization-policy`:
+```
+module "cloudbase" {
+  source  = "Levetty/cloudbase/google//modules/organization-policy"
+  version = "0.7.0"
+
+  project_id = "xxx" # required
+  sa_email   = "sample@${project_id}.iam.gserviceaccount.com" # required
+}
+```
