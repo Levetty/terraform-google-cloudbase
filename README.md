@@ -3,10 +3,11 @@
 Terraform module for Cloudbase on GCP.
 
 ## Usage
+`project-policy`:
 ```
 module "cloudbase" {
-  source  = "Levetty/cloudbase/google"
-  version = "0.6.0"
+  source  = "Levetty/cloudbase/google//modules/project-policy"
+  version = "0.7.0"
 
   project_id = "xxx" # required
 

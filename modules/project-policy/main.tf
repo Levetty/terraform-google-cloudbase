@@ -6,6 +6,7 @@ resource "random_string" "unique_id" {
 
 resource "google_service_account" "cloudbase_service_account" {
   account_id   = "cloudbase-sa-${random_string.unique_id.result}"
+  description  = "Cloudbase Security Scan"
   display_name = "Cloudbase Service Account"
   project      = var.project_id
 }
