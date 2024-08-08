@@ -6,7 +6,7 @@ Terraform module for Cloudbase on GCP.
 ```
 module "cloudbase" {
   source  = "Levetty/cloudbase/google"
-  version = "0.6.1"
+  version = "0.6.0"
 
   project_id = "xxx" # required
 
