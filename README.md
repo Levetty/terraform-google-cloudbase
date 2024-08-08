@@ -3,10 +3,11 @@
 Terraform module for Cloudbase on GCP.
 
 ## Usage
+`project-policy`:
 ```
 module "cloudbase" {
-  source  = "Levetty/cloudbase/google"
-  version = "0.6.0"
+  source  = "Levetty/cloudbase/google//modules/project-policy"
+  version = "0.7.0"
 
   project_id = "xxx" # required
 
@@ -14,5 +15,16 @@ module "cloudbase" {
 
   cloudbase_role_permissions = [
   ] # optional: if you want to custom role permissions, you can specify by this variable
+}
+```
+
+`organization-policy`:
+```
+module "cloudbase" {
+  source  = "Levetty/cloudbase/google//modules/organization-policy"
+  version = "0.7.0"
+
+  project_id = "xxx" # required
+  sa_email   = "sample@${project_id}.iam.gserviceaccount.com" # required
 }
 ```

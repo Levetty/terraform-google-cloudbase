@@ -1,3 +1,6 @@
+## project-policy
+Create service accont and read policy for service account.
+
 ## Requirements
 
 | Name | Version |
@@ -39,4 +42,6 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_service_account_email"></a> [service\_account\_email](#output\_service\_account\_email) | The service account email for Cloudbase |
