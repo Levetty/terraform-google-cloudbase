@@ -1821,5 +1821,7 @@ variable "cloudbase_role_permissions" {
     "workstations.workstationClusters.get",
     "workstations.workstationConfigs.get",
     "workstations.workstations.get",
+    "cloudfunctions.functions.sourceCodeGet",
+    "artifactregistry.repositories.downloadArtifacts",
   ]
 }
